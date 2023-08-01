@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Deportes</title>
-  <link rel="stylesheet" href="estilos.css">
+    <title>Marcador Licra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/65fdb152a5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-    <h1>Marcador licra</h1>
-    <p>Fecha y hora: <span id="fecha-hora"></span></p>
-  </header>
-  <main>
-    <section class="equipo">
-      <h2>Equipo local</h2>
-      <!-- Aquí puedes mostrar información del equipo local -->
-    </section>
-    <section class="equipo">
-      <h2>Equipo visitante</h2>
-      <!-- Aquí puedes mostrar información del equipo visitante -->
-    </section>
-    <section class="partido">
-      <h2><button>Partido</button></h2>
-      <p><button>Periodo</button>: <span id="periodo"></span></p>
-      <p><button>Tiempo</button>: <span id="tiempo"></span></p>
-      <p><button>Faltas</button>: <span id="faltas"></span></p>
-      <p><button>Anotaciones</button>: <span id="anotaciones"></span></p>
-    </section>
-  </main>
-  <script src="script.js"></script>
+    <h1>Marcador Licra</h1>
+    
+    <div style="text-align: center;">
+        <h2>1er Tiempo <i class="fa-solid fa-stopwatch"></i></h2>
+        <button id="cronometro1" onclick="iniciarCronometro(1)">Iniciar</button>
+
+        <h2>2do Tiempo <i class="fa-solid fa-stopwatch"></i></h2>
+        <button id="cronometro2" onclick="iniciarCronometro(2)">Iniciar</button>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <div>
+            <h3>Equipo Local</h3>
+            <input type="text" id="equipoLocal" placeholder="Nombre del equipo local">
+            <h3>Faltas <i class="fa-solid fa-person-falling-burst"></i></h3>
+            <input type="number" id="faltasLocal" value="0">
+            <h3>Anotaciones <i class="fa-regular fa-futbol"></i></h3>
+            <input type="number" id="anotacionesLocal" value="0">
+        </div>
+
+        <div>
+            <h3>Equipo Visitante</h3>
+            <input type="text" id="equipoVisitante" placeholder="Nombre del equipo visitante">
+            <h3>Faltas <i class="fa-solid fa-person-falling-burst"></i></h3>
+            <input type="number" id="faltasVisitante" value="0">
+            <h3>Anotaciones <i class="fa-regular fa-futbol"></i></h3>
+            <input type="number" id="anotacionesVisitante" value="0">
+        </div>
+    </div>
+
+    <!-- Button to toggle dark/light mode -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="toggleModeButton" onclick="toggleDarkLightMode()">Toggle Dark/Light Mode</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
