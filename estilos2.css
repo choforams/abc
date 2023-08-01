@@ -1,0 +1,144 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .equipo {
+    text-align: center;
+  }
+  
+  .equipo h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .partido {
+    text-align: center;
+  }
+  
+  .partido h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los botones de los datos del partido */
+  .partido button {
+    visibility: hidden; /* Esconder los botones por defecto */
+    margin: 5px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el botón Cambiar Modo */
+  #modo-boton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el modo claro */
+  body.mode-claro {
+    color: #111;
+    background-color: #f9f9f9;
+  }
+  
+  header.mode-claro {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .main.mode-claro {
+    border-color: #ccc;
+  }
+  
+  .equipo.mode-claro {
+    border-color: #ccc;
+  }
+  
+  .partido.mode-claro {
+    border-color: #ccc;
+  }
+  
+  /* Estilos para el modo oscuro */
+  body.mode-oscuro {
+    color: #ddd;
+    background-color: #333;
+  }
+  
+  header.mode-oscuro {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .main.mode-oscuro {
+    border-color: #666;
+  }
+  
+  .equipo.mode-oscuro {
+    border-color: #666;
+  }
+  
+  .partido.mode-oscuro {
+    border-color: #666;
+  }
+  
+  /* Estilos para el botón Cambiar Modo en diferentes modos */
+  #modo-boton.modo-claro {
+    background-color: #111;
+  }
+  
+  #modo-boton.modo-oscuro {
+    background-color: #fff;
+    color: #333;
+  }
+/* ... Otros estilos ... */
+
+/* Estilos para los botones ocultos */
+.partido button:not(.visible) {
+    visibility: hidden;
+  }
+  
+  /* Estilos para los botones visibles */
+  .partido button.visible {
+    visibility: visible;
+  }
+    
